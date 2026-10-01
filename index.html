@@ -12,6 +12,27 @@
 <meta property="og:type" content="website">
 
 <style>
+@keyframes backgroundMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes lightningBorder {
+    0% {
+        border-color: #00d2ff;
+        box-shadow: 0 0 15px rgba(0, 210, 255, 0.8), 0 0 30px rgba(0, 150, 255, 0.6), inset 0 0 10px rgba(0, 210, 255, 0.5);
+    }
+    50% {
+        border-color: #ffffff;
+        box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 120, 255, 0.9), inset 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        border-color: #00d2ff;
+        box-shadow: 0 0 15px rgba(0, 210, 255, 0.8), 0 0 30px rgba(0, 150, 255, 0.6), inset 0 0 10px rgba(0, 210, 255, 0.5);
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -31,9 +52,10 @@ body {
             rgba(0, 5, 30, 0.75)
         ),
         url("background.jpg");
-    background-size: cover;
+    background-size: 200% 200%;
     background-position: center;
     background-attachment: fixed;
+    animation: backgroundMove 15s ease infinite;
     min-height: 100vh;
 }
 
@@ -53,10 +75,8 @@ body {
     height: 135px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #2196ff;
-    box-shadow:
-        0 0 20px rgba(0, 150, 255, 0.8),
-        0 0 40px rgba(0, 100, 255, 0.4);
+    border: 4px solid #00d2ff;
+    animation: lightningBorder 2s infinite ease-in-out;
 }
 
 .name {
@@ -97,6 +117,7 @@ body {
     box-shadow:
         0 8px 25px rgba(0, 80, 180, 0.35),
         0 0 15px rgba(0, 150, 255, 0.15);
+    transition: transform 0.2s ease;
 }
 
 .button:active {
@@ -157,22 +178,36 @@ body {
     </div>
 
     <div class="buttons">
-         <!-- ปุ่มที่ 1: กดแล้วเปิดรูปป้ายบัญชีจากเว็บฝากรูป -->
+         <!-- ปุ่มที่ 1: ป้ายบัญชีซาลิส -->
         <a class="button" href="https://img2.pic.in.th/70C410CE-575B-4E58-BC26-DA1F7A389FCA.jpeg" target="_blank">
             <div class="button-icon">🍒</div>
             <div class="button-text">ป้ายบัญชีซาลิส 💙</div>
             <div class="arrow">➜</div>
         </a>
 
-         <!-- ปุ่มที่ 2: กดแล้วเปิดรูปกฎและค่าธรรมเนียม -->
+         <!-- ปุ่มที่ 2: กฎเดิมพัน -->
         <a class="button" href="https://img2.pic.in.th/A0F0A0F7-A5C0-4A67-A0F8-2F950C0592E5.png" target="_blank">
-            <div class="button-icon">🦋</div>
-            <div class="button-text">กฎเดิมพันเพิ่มเติมซาลิส</div>
+            <div class="button-icon">📜</div>
+            <div class="button-text">กฎเดิมพัน</div>
             <div class="arrow">➜</div>
         </a>
 
-        <!-- ปุ่มที่ 3 -->
-        <a class="button" href="https://example.com">
+         <!-- ปุ่มที่ 3: ตารางค่าธรรมเนียม -->
+        <a class="button" href="ใส่ลิงก์รูปตารางค่าธรรมเนียมตรงนี้" target="_blank">
+            <div class="button-icon">📊</div>
+            <div class="button-text">ตารางค่าธรรมเนียม</div>
+            <div class="arrow">➜</div>
+        </a>
+
+         <!-- ปุ่มที่ 4: DISCORD -->
+        <a class="button" href="ใส่ลิงก์DISCORDของคุณตรงนี้" target="_blank">
+            <div class="button-icon">💬</div>
+            <div class="button-text">DISCORD</div>
+            <div class="arrow">➜</div>
+        </a>
+
+        <!-- ปุ่มที่ 5: ช่องทางติดต่อซาลิส -->
+        <a class="button" href="https://example.com" target="_blank">
             <div class="button-icon">👑</div>
             <div class="button-text">ช่องทางติดต่อซาลิส</div>
             <div class="arrow">➜</div>
