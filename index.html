@@ -38,17 +38,11 @@
     100% { transform: rotate(360deg); }
 }
 
-/* แอนิเมชันสำหรับมังกรขยับลอยไปมา */
-@keyframes dragonFloat {
-    0% { transform: translateY(0px) scale(1); opacity: 0.35; }
-    50% { transform: translateY(-8px) scale(1.03); opacity: 0.6; }
-    100% { transform: translateY(0px) scale(1); opacity: 0.35; }
-}
-
+/* เอฟเฟกต์มังกรกลางจอขยับลอย */
 @keyframes dragonCenterFloat {
-    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 0.15; }
-    50% { transform: translate(-50%, -53%) scale(1.05) rotate(1deg); opacity: 0.3; }
-    100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 0.15; }
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.25; }
+    50% { transform: translate(-50%, -53%) scale(1.04); opacity: 0.45; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0.25; }
 }
 
 * {
@@ -79,19 +73,19 @@ body {
     overflow-x: hidden;
 }
 
-/* ภาพมังกรเคลื่อนไหวอยู่กลางจอ (ฉากหลัง) */
+/* รูปมังกรขยับได้บริเวณกลางจอ (ฉากหลัง) */
 .center-dragon-bg {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 380px;
-    height: 380px;
+    width: 340px;
+    height: 340px;
     object-fit: contain;
     pointer-events: none;
     z-index: 0;
-    animation: dragonCenterFloat 6s ease-in-out infinite;
-    filter: drop-shadow(0 0 25px rgba(0, 191, 255, 0.6)) brightness(1.2);
+    animation: dragonCenterFloat 5s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.7)) brightness(1.2);
 }
 
 .container {
@@ -130,25 +124,12 @@ body {
 
 .profile-wrapper {
     position: relative;
-    width: 125px;
-    height: 125px;
+    width: 115px;
+    height: 115px;
     margin: 0 auto 12px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* รูปมังกรขยับได้ครอบรอบกรอบโปรไฟล์ */
-.profile-dragon-frame {
-    position: absolute;
-    inset: -12px;
-    width: 149px;
-    height: 149px;
-    object-fit: contain;
-    pointer-events: none;
-    z-index: 3;
-    animation: dragonFloat 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.9));
 }
 
 .profile-wrapper::before {
@@ -264,8 +245,8 @@ body {
 
 <body>
 
-<!-- ภาพมังกรเคลื่อนไหวอยู่กลางจอฉากหลัง -->
-<img src="https://img2.pic.in.th/70C410CE-575B-4E58-BC26-DA1F7A389FCA.jpeg" alt="Center Dragon" class="center-dragon-bg">
+<!-- รูปมังกรขยับได้ตรงกลางจอ (สามารถเปลี่ยนลิงก์รูปภาพ GIF มังกรของคุณได้ที่นี่) -->
+<img src="https://img2.pic.in.th/70C410CE-575B-4E58-BC26-DA1F7A389FCA.jpeg" alt="Dragon Center" class="center-dragon-bg">
 
 <div class="container">
 
@@ -275,8 +256,6 @@ body {
         
         <div class="profile">
             <div class="profile-wrapper">
-                <!-- รูปมังกรขยับครอบรอบกรอบโปรไฟล์ -->
-                <img src="https://img2.pic.in.th/A0F0A0F7-A5C0-4A67-A0F8-2F950C0592E5.png" alt="Dragon Frame" class="profile-dragon-frame">
                 <img src="profile.jpg" alt="ซาลิส">
             </div>
 
