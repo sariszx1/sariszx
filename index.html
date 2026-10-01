@@ -38,6 +38,19 @@
     100% { transform: rotate(360deg); }
 }
 
+/* แอนิเมชันสำหรับมังกรขยับลอยไปมา */
+@keyframes dragonFloat {
+    0% { transform: translateY(0px) scale(1); opacity: 0.35; }
+    50% { transform: translateY(-8px) scale(1.03); opacity: 0.6; }
+    100% { transform: translateY(0px) scale(1); opacity: 0.35; }
+}
+
+@keyframes dragonCenterFloat {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 0.15; }
+    50% { transform: translate(-50%, -53%) scale(1.05) rotate(1deg); opacity: 0.3; }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 0.15; }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -62,6 +75,23 @@ body {
     background-attachment: fixed;
     animation: backgroundMove 18s ease infinite;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ภาพมังกรเคลื่อนไหวอยู่กลางจอ (ฉากหลัง) */
+.center-dragon-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 380px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 0;
+    animation: dragonCenterFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(0, 191, 255, 0.6)) brightness(1.2);
 }
 
 .container {
@@ -69,9 +99,10 @@ body {
     max-width: 500px;
     margin: auto;
     padding: 25px 15px 50px;
+    position: relative;
+    z-index: 1;
 }
 
-/* สไตล์กล่องแบนเนอร์ด้านบนแบบเกม */
 .banner-card {
     background: rgba(10, 20, 45, 0.75);
     border: 1px solid rgba(0, 191, 255, 0.3);
@@ -99,12 +130,25 @@ body {
 
 .profile-wrapper {
     position: relative;
-    width: 115px;
-    height: 115px;
+    width: 125px;
+    height: 125px;
     margin: 0 auto 12px auto;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* รูปมังกรขยับได้ครอบรอบกรอบโปรไฟล์ */
+.profile-dragon-frame {
+    position: absolute;
+    inset: -12px;
+    width: 149px;
+    height: 149px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 3;
+    animation: dragonFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.9));
 }
 
 .profile-wrapper::before {
@@ -220,6 +264,9 @@ body {
 
 <body>
 
+<!-- ภาพมังกรเคลื่อนไหวอยู่กลางจอฉากหลัง -->
+<img src="https://img2.pic.in.th/70C410CE-575B-4E58-BC26-DA1F7A389FCA.jpeg" alt="Center Dragon" class="center-dragon-bg">
+
 <div class="container">
 
     <!-- กรอบแบนเนอร์และโปรไฟล์ด้านบนแบบเกม -->
@@ -228,6 +275,8 @@ body {
         
         <div class="profile">
             <div class="profile-wrapper">
+                <!-- รูปมังกรขยับครอบรอบกรอบโปรไฟล์ -->
+                <img src="https://img2.pic.in.th/A0F0A0F7-A5C0-4A67-A0F8-2F950C0592E5.png" alt="Dragon Frame" class="profile-dragon-frame">
                 <img src="profile.jpg" alt="ซาลิส">
             </div>
 
@@ -259,21 +308,21 @@ body {
         </a>
 
          <!-- ป้ายที่ 3: ตารางค่าธรรมเนียม -->
-        <a class="button" href="ใส่ลิงก์รูปตารางค่าธรรมเนียมตรงนี้" target="_blank">
+        <a class="button" href="https://img1.pic.in.th/images/489FDCC4-9C18-4CB8-92EC-5811F6BCD991932feace94382981.png" target="_blank">
             <div class="button-icon">📊</div>
             <div class="button-text">ตารางค่าธรรมเนียม</div>
             <div class="arrow">➜</div>
         </a>
 
          <!-- ป้ายที่ 4: DISCORD -->
-        <a class="button" href="ใส่ลิงก์DISCORDของคุณตรงนี้" target="_blank">
+        <a class="button" href="https://discord.gg/r7MtqNSd3" target="_blank">
             <div class="button-icon">💬</div>
             <div class="button-text">DISCORD</div>
             <div class="arrow">➜</div>
         </a>
 
         <!-- ป้ายที่ 5: ช่องทางติดต่อซาลิส -->
-        <a class="button" href="https://example.com" target="_blank">
+        <a class="button" href="https://img2.pic.in.th/IMG_025987a7fa5cb5f8f7d5.png" target="_blank">
             <div class="button-icon">👑</div>
             <div class="button-text">ช่องทางติดต่อซาลิส</div>
             <div class="arrow">➜</div>
