@@ -124,12 +124,25 @@ body {
 
 .profile-wrapper {
     position: relative;
-    width: 115px;
-    height: 115px;
+    width: 125px;
+    height: 125px;
     margin: 0 auto 12px auto;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* กรอบพญานาคเลื้อยรอบรูปโปรไฟล์ */
+.profile-naga-frame {
+    position: absolute;
+    inset: -14px;
+    width: 153px;
+    height: 153px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 3;
+    animation: rotateLightning 10s linear infinite; /* หมุนวนรอบรูปโปรไฟล์แบบเท่ๆ */
+    filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.9));
 }
 
 .profile-wrapper::before {
@@ -256,6 +269,8 @@ body {
         
         <div class="profile">
             <div class="profile-wrapper">
+                <!-- GIF พญานาค/มังกรเลื้อยรอบกรอบรูป (สามารถเปลี่ยนลิงก์รูปภาพ GIF ของคุณได้ที่นี่) -->
+                <img src="https://img2.pic.in.th/A0F0A0F7-A5C0-4A67-A0F8-2F950C0592E5.png" alt="Naga Frame" class="profile-naga-frame">
                 <img src="profile.jpg" alt="ซาลิส">
             </div>
 
