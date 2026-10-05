@@ -3,13 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ซาลิส 💙👑</title>
+
 <meta name="description" content="ซาลิสตัวจริง">
+
+<!-- Facebook / Messenger -->
+<meta property="og:type" content="website">
 <meta property="og:title" content="ซาลิส 💙👑">
 <meta property="og:description" content="ซาลิสตัวจริง">
-<meta property="og:image" content="https://sariszx1.github.io/profile.jpg">
 <meta property="og:url" content="https://sariszx1.github.io/">
-<meta property="og:type" content="website">
+
+<meta property="og:image" content="https://sariszx1.github.io/profile.jpg">
+<meta property="og:image:url" content="https://sariszx1.github.io/profile.jpg">
+<meta property="og:image:secure_url" content="https://sariszx1.github.io/profile.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter / Link Preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ซาลิส 💙👑">
+<meta name="twitter:description" content="ซาลิสตัวจริง">
+<meta name="twitter:image" content="https://sariszx1.github.io/profile.jpg">
 
 <style>
 @keyframes backgroundMove {
@@ -21,28 +37,45 @@
 @keyframes lightningGlow {
     0% {
         border-color: #00bfff;
-        box-shadow: 0 0 15px rgba(0, 191, 255, 0.6), 0 0 30px rgba(0, 120, 255, 0.4), inset 0 0 15px rgba(0, 191, 255, 0.4);
+        box-shadow:
+            0 0 15px rgba(0, 191, 255, 0.6),
+            0 0 30px rgba(0, 120, 255, 0.4),
+            inset 0 0 15px rgba(0, 191, 255, 0.4);
     }
+
     50% {
         border-color: #ffffff;
-        box-shadow: 0 0 25px rgba(0, 242, 254, 1), 0 0 50px rgba(0, 140, 255, 0.8), inset 0 0 25px rgba(255, 255, 255, 0.8);
+        box-shadow:
+            0 0 25px rgba(0, 242, 254, 1),
+            0 0 50px rgba(0, 140, 255, 0.8),
+            inset 0 0 25px rgba(255, 255, 255, 0.8);
     }
+
     100% {
         border-color: #00bfff;
-        box-shadow: 0 0 15px rgba(0, 191, 255, 0.6), 0 0 30px rgba(0, 120, 255, 0.4), inset 0 0 15px rgba(0, 191, 255, 0.4);
+        box-shadow:
+            0 0 15px rgba(0, 191, 255, 0.6),
+            0 0 30px rgba(0, 120, 255, 0.4),
+            inset 0 0 15px rgba(0, 191, 255, 0.4);
     }
 }
 
 @keyframes rotateLightning {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     min-height: 100%;
@@ -51,16 +84,19 @@ html, body {
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     color: white;
+
     background:
         linear-gradient(
             rgba(0, 15, 40, 0.7),
             rgba(0, 5, 20, 0.9)
         ),
         url("background.jpg");
+
     background-size: 200% 200%;
     background-position: center;
     background-attachment: fixed;
     animation: backgroundMove 18s ease infinite;
+
     min-height: 100vh;
 }
 
@@ -76,8 +112,13 @@ body {
     border: 1px solid rgba(0, 191, 255, 0.3);
     border-radius: 24px;
     padding: 20px 15px;
+
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 150, 255, 0.15);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 15px rgba(0, 150, 255, 0.15);
+
     margin-bottom: 20px;
     text-align: center;
 }
@@ -88,6 +129,7 @@ body {
     object-fit: cover;
     border-radius: 16px;
     margin-bottom: 15px;
+
     border: 1px solid rgba(0, 191, 255, 0.4);
 }
 
@@ -100,7 +142,9 @@ body {
     position: relative;
     width: 115px;
     height: 115px;
+
     margin: 0 auto 12px auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,39 +152,70 @@ body {
 
 .profile-wrapper::before {
     content: '';
+
     position: absolute;
     inset: -5px;
+
     border-radius: 50%;
-    background: conic-gradient(from 0deg, #00f2fe, #4facfe, #0052D4, #439cfb, #00f2fe);
+
+    background:
+        conic-gradient(
+            from 0deg,
+            #00f2fe,
+            #4facfe,
+            #0052D4,
+            #439cfb,
+            #00f2fe
+        );
+
     animation: rotateLightning 4s linear infinite;
+
     z-index: 1;
+
     filter: blur(2px);
+
     opacity: 0.9;
 }
 
 .profile img {
     position: relative;
+
     width: 105px;
     height: 105px;
+
     object-fit: cover;
+
     border-radius: 50%;
+
     border: 2px solid #ffffff;
-    animation: lightningGlow 2.5s infinite ease-in-out;
+
+    animation:
+        lightningGlow
+        2.5s infinite ease-in-out;
+
     z-index: 2;
 }
 
 .name {
     font-size: 26px;
     font-weight: bold;
-    text-shadow: 0 2px 8px #000, 0 0 15px rgba(0, 191, 255, 0.8);
+
+    text-shadow:
+        0 2px 8px #000,
+        0 0 15px rgba(0, 191, 255, 0.8);
+
     letter-spacing: 0.5px;
 }
 
 .description {
     margin-top: 6px;
+
     font-size: 15px;
+
     color: #cbd5e1;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+
+    text-shadow:
+        0 1px 3px rgba(0,0,0,0.8);
 }
 
 .buttons {
@@ -152,67 +227,115 @@ body {
 .button {
     display: flex;
     align-items: center;
+
     text-decoration: none;
+
     color: white;
-    background: rgba(12, 25, 55, 0.85);
-    border: 1px solid rgba(0, 191, 255, 0.35);
+
+    background:
+        rgba(12, 25, 55, 0.85);
+
+    border:
+        1px solid rgba(0, 191, 255, 0.35);
+
     border-radius: 18px;
+
     padding: 12px 16px;
+
     min-height: 68px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-    transition: all 0.25s ease;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+
+    transition:
+        all 0.25s ease;
+
     backdrop-filter: blur(8px);
 }
 
 .button:hover {
-    background: rgba(20, 40, 80, 0.9);
-    border-color: rgba(0, 242, 254, 0.8);
-    box-shadow: 0 8px 25px rgba(0, 150, 255, 0.4);
-    transform: translateY(-2px);
+    background:
+        rgba(20, 40, 80, 0.9);
+
+    border-color:
+        rgba(0, 242, 254, 0.8);
+
+    box-shadow:
+        0 8px 25px rgba(0, 150, 255, 0.4);
+
+    transform:
+        translateY(-2px);
 }
 
 .button:active {
-    transform: scale(0.97);
+    transform:
+        scale(0.97);
 }
 
 .button-icon {
     width: 44px;
     height: 44px;
+
     border-radius: 12px;
-    background: rgba(0, 15, 35, 0.9);
-    border: 1px solid rgba(0, 191, 255, 0.3);
+
+    background:
+        rgba(0, 15, 35, 0.9);
+
+    border:
+        1px solid rgba(0, 191, 255, 0.3);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 22px;
+
     margin-right: 14px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .button-text {
     flex: 1;
+
     font-size: 17px;
+
     font-weight: bold;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+
+    text-shadow:
+        0 1px 3px rgba(0,0,0,0.5);
 }
 
 .arrow {
     font-size: 20px;
+
     color: #00f2fe;
-    text-shadow: 0 0 10px #00f2fe;
-    transition: transform 0.2s ease;
+
+    text-shadow:
+        0 0 10px #00f2fe;
+
+    transition:
+        transform 0.2s ease;
 }
 
 .button:hover .arrow {
-    transform: translateX(4px);
+    transform:
+        translateX(4px);
 }
 
 .footer {
     text-align: center;
+
     margin-top: 30px;
+
     color: #94a3b8;
+
     font-size: 12px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+
+    text-shadow:
+        0 1px 3px rgba(0,0,0,0.8);
 }
 </style>
 </head>
@@ -221,13 +344,24 @@ body {
 
 <div class="container">
 
-    <!-- กรอบแบนเนอร์และโปรไฟล์ด้านบนแบบเกม -->
+    <!-- กรอบแบนเนอร์และโปรไฟล์ -->
     <div class="banner-card">
-        <img src="background.jpg" alt="Banner" class="banner-img">
-        
+
+        <img
+            src="background.jpg"
+            alt="Banner"
+            class="banner-img"
+        >
+
         <div class="profile">
+
             <div class="profile-wrapper">
-                <img src="profile.jpg" alt="ซาลิส">
+
+                <img
+                    src="profile.jpg"
+                    alt="ซาลิส"
+                >
+
             </div>
 
             <div class="name">
@@ -238,46 +372,126 @@ body {
                 ซาลิสตัวจริง<br>
                 ชื่อบัญชี : ธนธัช อยู่พุ่ม 🌻
             </div>
+
         </div>
+
     </div>
 
-    <!-- รายการปุ่มกดต่างๆ -->
+
+    <!-- รายการปุ่ม -->
     <div class="buttons">
-         <!-- ป้ายที่ 1: ป้ายบัญชีซาลิส -->
-        <a class="button" href="https://img2.pic.in.th/70C410CE-575B-4E58-BC26-DA1F7A389FCA.jpeg" target="_blank">
-            <div class="button-icon">🍒</div>
-            <div class="button-text">ป้ายบัญชีซาลิส 💙</div>
-            <div class="arrow">➜</div>
+
+        <!-- ป้ายบัญชีซาลิส -->
+        <a
+            class="button"
+            href="https://img2.pic.in.th/70C410CE-575B-4E58-BC26-DA1F7A389FCA.jpeg"
+            target="_blank"
+        >
+
+            <div class="button-icon">
+                🍒
+            </div>
+
+            <div class="button-text">
+                ป้ายบัญชีซาลิส 💙
+            </div>
+
+            <div class="arrow">
+                ➜
+            </div>
+
         </a>
 
-         <!-- ป้ายที่ 2: กฎเดิมพัน -->
-        <a class="button" href="https://img2.pic.in.th/A0F0A0F7-A5C0-4A67-A0F8-2F950C0592E5.png" target="_blank">
-            <div class="button-icon">📜</div>
-            <div class="button-text">กฎเดิมพัน</div>
-            <div class="arrow">➜</div>
+
+        <!-- กฎเดิมพัน -->
+        <a
+            class="button"
+            href="https://img2.pic.in.th/A0F0A0F7-A5C0-4A67-A0F8-2F950C0592E5.png"
+            target="_blank"
+        >
+
+            <div class="button-icon">
+                📜
+            </div>
+
+            <div class="button-text">
+                กฎเดิมพัน
+            </div>
+
+            <div class="arrow">
+                ➜
+            </div>
+
         </a>
 
-         <!-- ป้ายที่ 3: ตารางค่าธรรมเนียม -->
-        <a class="button" href="https://img1.pic.in.th/images/489FDCC4-9C18-4CB8-92EC-5811F6BCD991932feace94382981.png" target="_blank">
-            <div class="button-icon">📊</div>
-            <div class="button-text">ตารางค่าธรรมเนียม</div>
-            <div class="arrow">➜</div>
+
+        <!-- ตารางค่าธรรมเนียม -->
+        <a
+            class="button"
+            href="https://img1.pic.in.th/images/489FDCC4-9C18-4CB8-92EC-5811F6BCD991932feace94382981.png"
+            target="_blank"
+        >
+
+            <div class="button-icon">
+                📊
+            </div>
+
+            <div class="button-text">
+                ตารางค่าธรรมเนียม
+            </div>
+
+            <div class="arrow">
+                ➜
+            </div>
+
         </a>
 
-         <!-- ป้ายที่ 4: DISCORD -->
-        <a class="button" href="https://discord.gg/r7MtqNSd3" target="_blank">
-            <div class="button-icon">💬</div>
-            <div class="button-text">DISCORD</div>
-            <div class="arrow">➜</div>
+
+        <!-- DISCORD -->
+        <a
+            class="button"
+            href="https://discord.gg/r7MtqNSd3"
+            target="_blank"
+        >
+
+            <div class="button-icon">
+                💬
+            </div>
+
+            <div class="button-text">
+                DISCORD
+            </div>
+
+            <div class="arrow">
+                ➜
+            </div>
+
         </a>
 
-        <!-- ป้ายที่ 5: ช่องทางติดต่อซาลิส -->
-        <a class="button" href="https://img2.pic.in.th/IMG_025987a7fa5cb5f8f7d5.png" target="_blank">
-            <div class="button-icon">👑</div>
-            <div class="button-text">ช่องทางติดต่อซาลิส</div>
-            <div class="arrow">➜</div>
+
+        <!-- ช่องทางติดต่อ -->
+        <a
+            class="button"
+            href="https://img2.pic.in.th/IMG_025987a7fa5cb5f8f7d5.png"
+            target="_blank"
+        >
+
+            <div class="button-icon">
+                👑
+            </div>
+
+            <div class="button-text">
+                ช่องทางติดต่อซาลิส
+            </div>
+
+            <div class="arrow">
+                ➜
+            </div>
+
         </a>
+
     </div>
+
 
     <div class="footer">
         © 2026 ซาลิส 👑⚡️
